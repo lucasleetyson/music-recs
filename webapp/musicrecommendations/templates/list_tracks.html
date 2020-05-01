@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Music Recommandations</title>
+</head>
+
+<body class="bg-light">
+    <div class="container">
+        <div class="py-5 text-center">
+            <h2>Music recommendations</h2>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam placerat metus posuere consequat eleifend. Fusce placerat, mi vitae tempor finibus, orci urna dignissim ligula, a mollis est eros ac eros.</p>
+            <div class="row">
+
+            </div>
+            <div class="row justify-content-md-center">
+                {% for track in tracks %}
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ track.thumbnail }}" class="card-img-top" alt="thumbnail">
+                    <div class="card-body">
+                    <h5 class="card-title">{{ track.title }}</h5>
+                    <p class="card-text">{{ track.artist }}</p>
+                    <a href="{{ track.youtube_url }}" class="btn btn-primary" target="_blank">Youtube</a>
+                    </div>
+                </div>
+                 {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
